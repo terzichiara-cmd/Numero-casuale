@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Numero del giorno</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      font-family: "Comic Sans MS", Arial, sans-serif;
+    }
+
+    .contenitore {
+      background: white;
+      padding: 40px 60px;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #ff6f61;
+      font-size: 36px;
+    }
+
+    .numero {
+      font-size: 100px;
+      font-weight: bold;
+      color: #4CAF50;
+    }
+
+    .sottotitolo {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="contenitore">
+    <h1>🎉 Numero del giorno 🎉</h1>
+    <div class="numero" id="numero"></div>
+    <div class="sottotitolo">Scansiona il QR ogni giorno!</div>
+  </div>
+
+  <script>
+    const numero = Math.floor(Math.random() * 10000) + 1;
+    document.getElementById("numero").textContent = numero;
+  </script>
+
+</body>
+</html>
